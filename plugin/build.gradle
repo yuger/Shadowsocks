@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+android {
+    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion rootProject.sdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.sdkVersion
+        versionCode 6
+        versionName "0.1.1"
+    }
+}
+dependencies {
+    api "com.android.support:preference-v14:$supportLibraryVersion"
+    api "com.takisoft.fix:preference-v7:$takisoftFixVersion"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+}
+repositories {
+    mavenCentral()
+}
